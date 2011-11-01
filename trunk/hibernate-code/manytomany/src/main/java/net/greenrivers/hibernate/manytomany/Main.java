@@ -1,4 +1,4 @@
-package org.greenrivers.hibernate.manytomany;
+package net.greenrivers.hibernate.manytomany;
 
 public class Main {
     public static void main(String[] args) {
