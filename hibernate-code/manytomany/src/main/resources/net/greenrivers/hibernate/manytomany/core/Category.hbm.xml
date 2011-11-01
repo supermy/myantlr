@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="net.greenrivers.hibernate.manytomany.core">
+  <class name="Category" table="Category">
+    <id column="id" name="id" type="java.lang.Integer">
+      <generator class="native"/>
+    </id>
+    <property column="name" name="name" not-null="true" type="java.lang.String" />
+    <set name="licenses" table="Certified" lazy="false" inverse="true">
+        <key column="categoryid" />
+        <many-to-many column="licenseid" class="License" />
+    </set>
+  </class>
+</hibernate-mapping>
